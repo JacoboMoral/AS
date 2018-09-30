@@ -1,0 +1,39 @@
+-- implementació feta amb
+-- class table inheritance
+
+drop table exemplar;
+drop table llibre;
+drop table soci;
+drop table biblioteca;
+drop table instalacio;
+
+create table instalacio
+(nomI char(30), 
+adreca varchar(50),
+primary key (nomI));
+
+create table biblioteca
+(nomB char(30), 
+publica boolean,
+primary key (nomB),
+foreign key (nomB) references instalacio);
+
+create table soci
+(nomS varchar(50),
+edat integer,
+nomInst char(30),
+primary key (nomS),
+foreign key (nomInst) references instalacio);
+
+create table llibre
+(isbn char(20), 
+titol varchar(70),
+primary key (isbn));
+
+create table exemplar
+(isbn char(20),
+nomB char(30),
+quants integer,
+primary key (isbn,nomB),
+foreign key (isbn) references llibre,
+foreign key (nomB) references biblioteca);

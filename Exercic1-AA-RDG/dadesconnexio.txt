@@ -1,0 +1,8 @@
+org.postgresql.Driver
+jdbc:postgresql://postgresfib.fib.upc.es:6433/SAbd
+true
+org.postgresql.ssl.NonValidatingFactory
+true
+asXX
+usuari.as
+1516q1SAbd

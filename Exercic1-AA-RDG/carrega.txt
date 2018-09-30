@@ -1,0 +1,36 @@
+delete from exemplar;
+delete from llibre;
+delete from soci;
+delete from biblioteca;
+delete from instalacio;
+
+
+insert into instalacio values('ajuntament','plaça de sant jaume 1');
+insert into instalacio values('gimnas eixample','carrer pau claris 20');
+insert into instalacio values('biblioteca can roses','carrer deu i mata 57');
+insert into instalacio values('biblioteca jaume fuster','plaça de lesseps 20-22');
+insert into instalacio values('biblioteca borja','avinguda torreblanca 59');
+insert into instalacio values('biblioteca la florida','avinguda masnou 89');
+
+insert into biblioteca values('biblioteca can roses',true);
+insert into biblioteca values('biblioteca jaume fuster',true);
+insert into biblioteca values('biblioteca borja',false);
+insert into biblioteca values('biblioteca la florida',true);
+
+insert into soci values('pere camp',20,'biblioteca jaume fuster');
+insert into soci values('anna porta',22,'gimnas eixample');
+insert into soci values('ot pi',22,'biblioteca la florida');
+insert into soci values('pau xisc',22,'biblioteca la florida');
+insert into soci values('ona garcia',21,'biblioteca borja');
+insert into soci values('josep rius',19,'biblioteca borja');
+
+insert into llibre values('111','Vida extra. Els videojocs com no els has vist mai');
+insert into llibre values('222','Videojuegos y mundos de ficción. De Supermario a Portal');
+insert into llibre values('333','De Supermario a Lara Croft, La historia oculta de los videojuegos');
+insert into llibre values('444','La invasión de los marcianitos');
+
+insert into exemplar values('111','biblioteca can roses',2);
+insert into exemplar values('111','biblioteca jaume fuster',3);
+insert into exemplar values('333','biblioteca jaume fuster',4);
+insert into exemplar values('222','biblioteca can roses',1);
+insert into exemplar values('222','biblioteca jaume fuster',1);
